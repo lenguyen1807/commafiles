@@ -32,7 +32,11 @@ return require("packer").startup(function(use)
 
     use "psliwka/vim-smoothie"
 
+    -- Color scheme --
+
     use "ellisonleao/gruvbox.nvim"
+
+    use 'folke/tokyonight.nvim' 
 
     -- Completion --
     

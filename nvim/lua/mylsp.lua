@@ -2,19 +2,19 @@
 local _, lspinstall = pcall(require, "nvim-lsp-installer")
 
 lspinstall.settings({
-  ui = {
-    icons = {
-      server_installed = "✓",
-      server_pending = "➜",
-      server_uninstalled = "✗",
+    ui = {
+	icons = {
+	    server_installed = "✓",
+	    server_pending = "➜",
+	    server_uninstalled = "✗",
+	},
     },
-  },
 })
 
 local servers = {
-  "pyright",
-  "clangd",
-  "texlab",
+    "pyright",
+    "clangd",
+    "texlab",
 }
 
 for _, name in pairs(servers) do
@@ -56,8 +56,8 @@ local _, lspconfig = pcall(require, "lspconfig")
 local servers = {'clangd', 'texlab', 'pyright'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
-    on_attach = on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
     }
 end

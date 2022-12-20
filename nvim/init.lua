@@ -27,7 +27,9 @@ require('nvim-autopairs').setup {}
 require("gruvbox").setup({
     italic = false,
 })
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
+
+vim.cmd("colorscheme tokyonight-night")
 
 require('Comment').setup()
 
