@@ -44,7 +44,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+j focus left
@@ -167,6 +167,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# take screen shot
+bindsym --release Shift+Print exec "sh ~/.config/i3/screenshot.sh -s ~/Pictures/Screenshots/"
+bindsym --release Print exec "sh ~/.config/i3/screenshot.Sh ~/Pictures/Screenshots/"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
@@ -203,15 +207,15 @@ gaps outer 10
 
 no_focus [window_role="pop-up"]
 
-# for_window [ class="thunar"                  ] resize set 800px 600px
-# for_window [ title="File Operation Progress" ] floating enable
-# for_window [ title="Open Folder"             ] floating enable, resize set 600px 600px, move position center
-# for_window [ title="Open File"               ] floating enable, resize set 800px 600px, move position center
-# for_window [ title="Save pdf file"           ] floating enable, resize set 800px 600px, move position center
-# for_window [ title="Add bookmark"            ] floating enable, resize set 800px 600px, move position center
-# for_window [ window_role="dialog"            ] floating enable, resize set 900px 696px, move position center
-# for_window [ window_role="pop-up"            ] floating enable
-# for_window [ window_role="bubble"            ] floating enable
-# for_window [ window_role="task_dialog"       ] floating enable
-# for_window [ window_role="Preferences"       ] floating enable
-# for_window [ window_type="menu"              ] floating enable
+for_window [ title="Open Folder"             ] floating enable, move position center
+for_window [ title="Open File"               ] floating enable, move position center
+for_window [ title="Save pdf file"           ] floating enable, move position center
+for_window [ title="Add bookmark"            ] floating enable, move position center
+for_window [ window_role="dialog"            ] floating enable, move position center
+for_window [ window_role="pop-up"            ] floating enable
+for_window [ window_role="bubble"            ] floating enable
+for_window [ window_role="task_dialog"       ] floating enable
+for_window [ window_role="Preferences"       ] floating enable
+for_window [ window_type="menu"              ] floating enable
+for_window [ class="Steam"                   ] floating enable, move position center
+
