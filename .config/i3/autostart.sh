@@ -1,24 +1,33 @@
-# kill if already running
-killall -9 picom xfce4-power-manager dunst
+# killall if already
+killall -9 picom xfce4-power-manager sxhkd fcitx5 
 
-# launch xfce4
-xfce4-power-manager &
+# Notifications
+/usr/bin/dunst &
 
-# launch picom
+# Polkit
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Wallpaper
+nitrogen --restore &
+
+# Dex
+dex -a -s /etc/xdg/autostart/:~/.config/autostart/  &
+
+# Network Applet
+nm-applet --indicator &
+
+# Cursor
+xsetroot -cursor_name left_ptr &
+
+# picom
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 picom --experimental-backends --config $HOME/.config/i3/picom.conf &
 
-# launch dunst
-dunst -config $HOME/.config/dunst/dunstrc &
+# powermanager
+xfce4-power-manager &
 
-# launch polybar
-sh $HOME/.config/polybar/launch.sh &
-
-# launch nitrogen
-nitrogen --restore &
-
-# launch fcitx5
+# key
 fcitx5 -d &
 
-# launch geoclue
-/usr/lib/geoclue-2.0/demos/agent &
+# start redshift
+redshift -c ~/.config/redshift/redshift.conf &

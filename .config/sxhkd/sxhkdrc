@@ -10,20 +10,6 @@ super + Return
 super + d
 	rofi -show drun -show-icons
 
-# show open window
-# super + ctrl + d
-#	rofi -modi drun -show window -line-padding 4 \
-
-# show ssh sesssions
-#super + shift + d
-#	rofi -modi drun -show ssh -line-padding 4 \
-#                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
-#                -show-icons -drun-icon-theme "Qogir-dark" -font "Droid Sans Regular 10"
-
-# power-menu 
-#super + shift + e
-#     ~/.config/rofi/powermenu.sh
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -137,13 +123,12 @@ super + {Left,Down,Up,Right}
 # Special hotkeys
 #
 
-# brightness
-#XF86MonBrightness{Up,Down}  
-#  brightnessctl s 5{+,-}  
- 
 # multimedia
-XF86Audio{Raise,Lower}Volume  
-  pulsemixer --change-volume {+,-}5
- 
-XF86AudioMute  
-  pulsemixer  --toggle-mute
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +2%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -2%
+
+XF86AudioMute
+    pactl set-sink-mute 0 toggle

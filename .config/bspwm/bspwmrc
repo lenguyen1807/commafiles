@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI
 
 bspc config border_width         3
 bspc config window_gap          10
@@ -13,7 +13,6 @@ bspc config gapless_monocle      true
 bspc config pointer_follows_focus true
 bspc config focus_follows_pointer true
 
-bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Yad state=floating
 bspc rule -a Kupfer.py focus=on
@@ -22,7 +21,7 @@ bspc rule -a Screenkey manage=off
 # Autostart
 
 # killall if already
-killall -9 picom xfce4-power-manager sxhkd fcitx5 
+killall -9 picom xfce4-power-manager sxhkd fcitx5 redshift-gtk redshift dunst
 
 # start hotkey
 sxhkd &
@@ -52,6 +51,7 @@ nm-applet --indicator &
 xsetroot -cursor_name left_ptr &
 
 # picom
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 picom --experimental-backends --config ~/.config/bspwm/picom.conf &
 
 # Low battery notifier
@@ -61,7 +61,10 @@ sh ~/.config/bspwm/scripts/low_bat_notifier.sh &
 xfce4-power-manager &
 
 # key
-fcitx5 &
+fcitx5 -d &
+
+# redshift
+redshift -x && redshift-gtk &
 
 # double border
 # sh ~/.config/bspwm/scripts/border.sh

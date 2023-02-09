@@ -24,7 +24,7 @@ require('nvim-autopairs').setup {}
 
 require("gruvbox").setup({
     italic = false,
-    contrast = "hard",
+    transparent_mode = true,
 })
 vim.cmd("colorscheme gruvbox")
 
