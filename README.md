@@ -20,5 +20,5 @@ waybar-hyprland-git
 
 #### Fonts
 ```
-yay --needed -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts-emoji
+yay --needed -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk ttf-fira-code
 ```
