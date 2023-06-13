@@ -20,7 +20,7 @@ waybar-hyprland-git
 
 #### Fonts
 ```
-yay --needed -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk ttf-fira-code
+yay --needed -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk ttf-fira-code otf-san-francisco 
 ```
 
 #### Drivers
