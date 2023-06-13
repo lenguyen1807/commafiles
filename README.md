@@ -33,7 +33,7 @@ sudo pacman -S gamemode lib32-gamemode
 ```
 
 ```
-sudo pacman -S cmake make gcc gdb nodejs git r python python-pip llvm
+sudo pacman -S cmake make gcc gdb nodejs git r python python-pip llvm clang
 ```
 
 #### Bluetooth
