@@ -38,7 +38,7 @@ sudo pacman -S cmake make gcc gdb nodejs git r python python-pip llvm
 
 #### Bluetooth
 ```
-sudo pacman -S bluzutils
+sudo pacman -S bluez-utils
 modprobe btusb
 systemctl start bluetooth.service
 systemctl enable bluetooth.service
