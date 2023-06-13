@@ -68,3 +68,8 @@ QT_QPA_PLATFORM="wayland;xcb"
 SDL_VIDEODRIVER="wayland,x11"
 ```
 https://wiki.archlinux.org/title/wayland#GUI_libraries
+
+#### Texlive
+```
+sudo pacman -S texlive texlive-lang
+```
