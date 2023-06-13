@@ -35,3 +35,36 @@ sudo pacman -S gamemode lib32-gamemode
 ```
 sudo pacman -S cmake make gcc gdb nodejs git r python python-pip llvm
 ```
+
+#### Bluetooth
+```
+sudo pacman -S bluzutils
+modprobe btusb
+systemctl start bluetooth.service
+systemctl enable bluetooth.service
+```
+
+#### Keyboard
+```
+sudo pacman -S fcitx5-im fcitx5-unikey
+```
+
+edit environment:
+```
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+```
+
+#### Wayland
+```
+sudo pacman -S qt5-wayland qt6-wayland
+```
+
+edit environment:
+```
+QT_QPA_PLATFORM="wayland;xcb"
+SDL_VIDEODRIVER="wayland,x11"
+```
+https://wiki.archlinux.org/title/wayland#GUI_libraries
