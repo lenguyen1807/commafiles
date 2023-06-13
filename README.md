@@ -73,3 +73,8 @@ https://wiki.archlinux.org/title/wayland#GUI_libraries
 ```
 sudo pacman -S texlive texlive-lang
 ```
+
+#### Tools
+```
+yay -S visual-studio-code-bin github-desktop-bin rstudio-bin 
+```
