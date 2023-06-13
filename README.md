@@ -22,3 +22,16 @@ waybar-hyprland-git
 ```
 yay --needed -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk ttf-fira-code
 ```
+
+#### Drivers
+https://github.com/lutris/docs/blob/master/InstallingDrivers.md#arch--manjaro--other-arch-linux-derivatives
+
+https://github.com/lutris/docs/blob/master/WineDependencies.md#archantergosmanjaroother-arch-derivatives
+
+```
+sudo pacman -S gamemode lib32-gamemode
+```
+
+```
+sudo pacman -S cmake make gcc gdb nodejs git r python python-pip llvm
+```
