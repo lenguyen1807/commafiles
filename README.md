@@ -78,3 +78,9 @@ sudo pacman -S texlive texlive-lang
 ```
 yay -S visual-studio-code-bin github-desktop-bin rstudio-bin 
 ```
+
+gnome specific:
+```
+yay -S extension-manager
+sudo pacman -S power-profiles-daemon
+```
