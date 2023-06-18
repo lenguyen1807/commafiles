@@ -74,3 +74,8 @@ yay -S visual-studio-code-bin github-desktop-bin rstudio-bin
 
 ### Cpu freq
 https://github.com/AdnanHodzic/auto-cpufreq#auto-cpufreq-installer
+
+### Time sync
+```
+timedatectl set-local-rtc 1 --adjust-system-clock
+```
