@@ -11,7 +11,11 @@ wl-clipboard wf-recorder hyprpicker-git hyprpaper-git \
 xdg-desktop-portal-hyprland-git ffmpegthumbnailer tumbler  \
 swaylock-effects qt5-wayland qt6-wayland ripgrep  \
 thunar thunar-archive-plugin file-roller wtype colord \
-waybar-hyprland-git hyprland-git
+waybar-hyprland-git hyprland-git wlsunset
+```
+
+```
+sudo pacman -S brightnessctl pamixer
 ```
 
 #### Fonts
