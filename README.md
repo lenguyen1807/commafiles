@@ -1,3 +1,10 @@
+### TO DO
+- [] Update to latest
+- [] Install AUR
+- [] Set up brower (Edge or Chrome)
+- [] Set up code environment
+- [] Set up bluetooth, firewall, vietnamese key
+
 ### Hyprland
 
 <img src="img/1677083250.png">
