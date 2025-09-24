@@ -2,7 +2,7 @@
 shell-integration = zsh
 window-padding-x = 10
 window-padding-y = 10
-theme = GitHub-Dark-Default
+# theme = GitHub-Dark-Default
 background = #0d1117
 foreground = #e6edf3
 selection-background = #e6edf3
@@ -25,6 +25,7 @@ palette = 12=#79c0ff
 palette = 13=#d2a8ff
 palette = 14=#56d4dd
 palette = 15=#ffffff
-font-size = 16
+font-size = 15
 font-feature = -liga
-font-family = JetBrainsMono Nerd Font Mono
+background-opacity = 0.85
+background-blur = true
