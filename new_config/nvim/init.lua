@@ -1,5 +1,2 @@
-require("settings")
-require("keymaps")
-require("packages")
-
-vim.cmd("colorscheme github_dark_default")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

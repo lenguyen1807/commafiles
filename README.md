@@ -5,6 +5,23 @@
 - [] Set up code environment
 - [] Set up bluetooth, firewall, vietnamese key
 
+### macOS dotfiles workflow
+
+For active configs in this repo:
+- `new_config/nvim`
+- `new_config/aerospace`
+- `new_config/ghostty`
+
+Use the helper script from repo root:
+
+```bash
+./dotfiles.sh sync   # copy ~/.config/{nvim,aerospace,ghostty} -> new_config/
+./dotfiles.sh link   # symlink new_config/{nvim,aerospace,ghostty} -> ~/.config/
+./dotfiles.sh both   # sync then link
+```
+
+When linking, existing `~/.config/*` directories are backed up automatically to `*.bak.<timestamp>`.
+
 ### Hyprland
 
 <img src="img/1677083250.png">
