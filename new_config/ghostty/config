@@ -1,9 +1,10 @@
 shell-integration = zsh
 command = /bin/zsh
 working-directory = inherit
+shell-integration-features = ssh-terminfo,ssh-env
 
 font-family = "JetBrains Mono"
-font-size = 14
+font-size = 15
 font-feature = -liga
 window-inherit-font-size = true
 

@@ -1,105 +1,22 @@
-### TO DO
-- [] Update to latest
-- [] Install AUR
-- [] Set up brower (Edge or Chrome)
-- [] Set up code environment
-- [] Set up bluetooth, firewall, vietnamese key
+# Commafiles
 
-### macOS dotfiles workflow
+This repository contains the active macOS dotfiles and Codex configuration.
 
-For active configs in this repo:
-- `new_config/nvim`
-- `new_config/aerospace`
-- `new_config/ghostty`
+## Layout
 
-Use the helper script from repo root:
+- `new_config/` is the canonical configuration tree.
+- `new_config/codex/` contains authored Codex configuration: `AGENTS.md`, agent profiles, `config.toml`, rules, browser settings, and computer-use settings.
+- `.zshrc` remains a root-level shell dotfile.
+- Credentials and generated state are intentionally excluded, including GitHub `hosts.yml`, Codex `auth.json`, sessions, history, caches, databases, and plugin installations.
+
+## Sync and activate
+
+Run from the repository root:
 
 ```bash
-./dotfiles.sh sync   # copy ~/.config/{nvim,aerospace,ghostty} -> new_config/
-./dotfiles.sh link   # symlink new_config/{nvim,aerospace,ghostty} -> ~/.config/
-./dotfiles.sh both   # sync then link
+./dotfiles.sh sync   # snapshot the live configuration into new_config/
+./dotfiles.sh link   # make new_config/ the live configuration
+./dotfiles.sh both   # sync, then link
 ```
 
-When linking, existing `~/.config/*` directories are backed up automatically to `*.bak.<timestamp>`.
-
-### Hyprland
-
-<img src="img/1677083250.png">
-
-### Set up hyprland
-
-#### Dependencies
-```
-yay --needed -S polkit-kde-agent dunst grim rofi-lbonn-wayland-git rofi-emoji \
-wl-clipboard wf-recorder hyprpicker-git hyprpaper-git \
-xdg-desktop-portal-hyprland-git ffmpegthumbnailer tumbler  \
-swaylock-effects qt5-wayland qt6-wayland ripgrep  \
-thunar thunar-archive-plugin file-roller wtype colord \
-waybar-hyprland-git hyprland-git wlsunset
-```
-
-```
-sudo pacman -S brightnessctl pamixer
-```
-
-#### Fonts
-```
-yay --needed -S ttf-jetbrains-mono ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk ttf-fira-code otf-san-francisco 
-```
-
-#### Drivers
-https://github.com/lutris/docs/blob/master/InstallingDrivers.md#arch--manjaro--other-arch-linux-derivatives
-
-https://github.com/lutris/docs/blob/master/WineDependencies.md#archantergosmanjaroother-arch-derivatives
-
-```
-sudo pacman -S gamemode lib32-gamemode cmake make gcc gdb nodejs git r python python-pip llvm clang npm
-```
-
-#### Bluetooth
-```
-sudo pacman -S bluez-utils
-modprobe btusb
-systemctl start bluetooth.service
-systemctl enable bluetooth.service
-```
-
-#### Keyboard
-```
-sudo pacman -S fcitx5-im fcitx5-unikey
-```
-
-edit environment:
-```
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SDL_IM_MODULE=fcitx
-```
-
-#### Wayland
-edit environment:
-```
-QT_QPA_PLATFORM="wayland;xcb"
-SDL_VIDEODRIVER="wayland,x11"
-```
-https://wiki.archlinux.org/title/wayland#GUI_libraries
-
-
-#### Texlive
-```
-sudo pacman -S texlive texlive-lang
-```
-
-#### Tools
-```
-yay -S visual-studio-code-bin github-desktop-bin rstudio-bin 
-```
-
-### Cpu freq
-https://github.com/AdnanHodzic/auto-cpufreq#auto-cpufreq-installer
-
-### Time sync
-```
-timedatectl set-local-rtc 1 --adjust-system-clock
-```
+The `link` operation sends replaced files and directories to macOS Trash before creating symlinks. Codex is linked file-by-file so its credentials and runtime state remain outside the repository.

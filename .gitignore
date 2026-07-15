@@ -1,0 +1,6 @@
+.DS_Store
+**/*.bak.*
+new_config/gh/hosts.yml
+new_config/**/node_modules
+new_config/**/prompts
+new_config/**/*.mdb

@@ -1,0 +1,189 @@
+model = "gpt-5.6-luna"
+model_reasoning_effort = "high"
+
+notify = ["/Users/lenguyen/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+personality = "pragmatic"
+model_verbosity = "low"
+sandbox_mode = "workspace-write"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-07-15T15:46:54Z"
+source_type = "local"
+source = "/Users/lenguyen/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[features.multi_agent_v2]
+enabled = true
+max_concurrent_threads_per_session = 2
+hide_spawn_agent_metadata = false
+tool_namespace = "agents"
+
+[memories]
+generate_memories = false
+use_memories = false
+disable_on_external_context = true
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/lenguyen/.codex"
+CODEX_HOME = "/Users/lenguyen/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "6d25aa7656feac858f3a3bdaea5bcbab0dbfd426c9de8e6931ce90c399ee8e4f,cf732b4a285497bfd7e75a2ac14879bce9ae644eb4e1babeb17bb6a840dfc9bd"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.707.72221"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-07-10T04:53:45Z"
+source_type = "local"
+source = "/Users/lenguyen/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[projects."/Users/lenguyen/Documents/Workspace/Garden"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/manim-lib"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/blog"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/tufte-vdqi-plugin"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/gemm_metal"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/QR_GPUMODE"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/slide"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/banhxeo"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/retro_raycast"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/vla.cpp"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/comtam"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/learn-cuda"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Github/cuda-lab"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/ai_race"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/ln-notes"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/nvidia-interview"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Codex/2026-07-12/new-chat"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Codex/2026-07-12/st"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Codex/2026-07-12/research-on-my-codebase-currently-this"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/fold.cu"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Workspace/Test/pho-code"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Codex/2026-07-15/how"]
+trust_level = "trusted"
+
+[projects."/Users/lenguyen/Documents/Codex/2026-07-15/hey"]
+trust_level = "trusted"
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = false
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = false
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[desktop]
+sansFontSize = 15
+codeFontSize = 13
+selected-avatar-id = "codex"
+conversationDetailMode = "STEPS_COMMANDS"
+followUpQueueMode = "queue"
+appearanceTheme = "system"
+reduced-motion-preference = "on"
+dock-icon-preference = "codex-system"
+git-pull-request-merge-method = "merge"
+git-branch-prefix = "dev/"
+avatar-overlay-mascot-width-px = 111
+mac-menu-bar-enabled = false
+defaultTerminalLocation = "right"
+preventSleepWhileRunning = true
+ambient-suggestions-enabled = false
+show-context-window-usage = true
+usePointerCursors = true
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra"]
+show-ultra-in-model-picker-slider = true
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
+[tui]
+theme = "gruvbox-dark"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4
+
+[features]
+js_repl = false
+memories = false
+chronicle = false
