@@ -4,7 +4,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_ROOT="${HOME}/.config"
 CODEX_ROOT="${HOME}/.codex"
-NEW_CONFIG="${REPO_ROOT}/new_config"
+NEW_CONFIG="${REPO_ROOT}/config"
 
 CONFIG_DIRS=(aerospace ghostty nvim zed opencode codexbar linearmouse)
 CONFIG_FILES=(starship.toml)
@@ -15,8 +15,8 @@ usage() {
   cat <<'EOF'
 Usage: ./dotfiles.sh [sync|link|both]
 
-  sync  Copy the live authored configuration into new_config/
-  link  Link new_config/ back into the live configuration paths
+  sync  Copy the live authored configuration into config/
+  link  Link config/ back into the live configuration paths
   both  Run sync, then link
 EOF
 }

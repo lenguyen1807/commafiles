@@ -1,26 +1,38 @@
-model = "gpt-5.6-luna"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 
-notify = ["/Users/lenguyen/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 personality = "pragmatic"
 model_verbosity = "low"
 sandbox_mode = "workspace-write"
 
-[marketplaces.openai-bundled]
-last_updated = "2026-07-15T15:46:54Z"
-source_type = "local"
-source = "/Users/lenguyen/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+notify = ["/Users/lenguyen/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
 [features.multi_agent_v2]
 enabled = true
-max_concurrent_threads_per_session = 2
+max_concurrent_threads_per_session = 4
 hide_spawn_agent_metadata = false
 tool_namespace = "agents"
+
+[shell_environment_policy.set]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "5b74180ac40ca4cf726cad15c5ff886f159224f1c0306ea364ad9eea6a7e7ac2,6d25aa7656feac858f3a3bdaea5bcbab0dbfd426c9de8e6931ce90c399ee8e4f"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/lenguyen/.codex"
 
 [memories]
 generate_memories = false
 use_memories = false
 disable_on_external_context = true
+
+[marketplaces.openai-bundled]
+last_updated = "2026-07-17T14:52:47Z"
+source_type = "local"
+source = "/Users/lenguyen/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-07-16T18:00:39Z"
+source_type = "local"
+source = "/Users/lenguyen/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
 [mcp_servers.computer-use]
 command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
@@ -39,22 +51,18 @@ NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_n
 NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/lenguyen/.codex"
 CODEX_HOME = "/Users/lenguyen/.codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "6d25aa7656feac858f3a3bdaea5bcbab0dbfd426c9de8e6931ce90c399ee8e4f,cf732b4a285497bfd7e75a2ac14879bce9ae644eb4e1babeb17bb6a840dfc9bd"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "5b74180ac40ca4cf726cad15c5ff886f159224f1c0306ea364ad9eea6a7e7ac2,6d25aa7656feac858f3a3bdaea5bcbab0dbfd426c9de8e6931ce90c399ee8e4f"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
 NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.707.72221"
+BROWSER_USE_CODEX_APP_VERSION = "26.715.21425"
+SKY_CUA_SERVICE_PATH = "/Users/lenguyen/.codex/plugins/cache/openai-bundled/computer-use/1.0.1000451/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
 [mcp_servers.openaiDeveloperDocs]
 url = "https://developers.openai.com/mcp"
-
-[marketplaces.openai-primary-runtime]
-last_updated = "2026-07-10T04:53:45Z"
-source_type = "local"
-source = "/Users/lenguyen/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
 [projects."/Users/lenguyen/Documents/Workspace/Garden"]
 trust_level = "trusted"
@@ -138,7 +146,7 @@ enabled = true
 enabled = true
 
 [plugins."computer-use@openai-bundled"]
-enabled = false
+enabled = true
 
 [plugins."template-creator@openai-primary-runtime"]
 enabled = true
