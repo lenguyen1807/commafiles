@@ -1,0 +1,6 @@
+[submodule "config/pi/pi-zentui"]
+	path = config/pi/pi-zentui
+	url = https://github.com/lenguyen1807/pi-zentui.git
+[submodule "config/pi/pi-subagents"]
+	path = config/pi/pi-subagents
+	url = https://github.com/lenguyen1807/pi-subagents.git
