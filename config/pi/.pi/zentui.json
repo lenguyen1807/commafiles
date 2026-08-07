@@ -1,0 +1,37 @@
+{
+  "projectRefreshIntervalMs": 60000,
+  "contextStyle": "text+gauge",
+  "features": {
+    "editor": true,
+    "statusLine": true,
+    "copyFriendly": false,
+    "toolCalls": true,
+    "thinking": true
+  },
+  "footerSegments": {
+    "cwd": true,
+    "gitBranch": true,
+    "gitStatus": true,
+    "gitCounts": false,
+    "gitCommit": false,
+    "gitMetrics": false,
+    "runtime": false,
+    "packageVersion": false,
+    "context": true,
+    "tokens": true,
+    "cost": true,
+    "sessionDuration": false,
+    "time": false,
+    "username": false,
+    "os": false
+  },
+  "gitCommit": {
+    "hashLength": 7,
+    "onlyDetached": true,
+    "showTag": true
+  },
+  "gitMetrics": {
+    "onlyNonzero": true,
+    "ignoreSubmodules": false
+  }
+}

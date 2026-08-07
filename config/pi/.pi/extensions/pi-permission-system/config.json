@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-packages/main/packages/pi-permission-system/schemas/permissions.schema.json",
+  "debugLog": false,
+  "permissionReviewLog": false,
+  "yoloMode": false,
+  "doublePressToConfirm": true,
+  "piInfrastructureReadPaths": [
+    "/opt/homebrew/**/@earendil-works/pi-coding-agent/**"
+  ],
+  "permission": {
+    "*": "ask",
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "~/.ssh/*": "deny",
+      "~/.aws/*": "deny"
+    },
+    "read": "allow",
+    "fetch_content": "allow",
+    "fffind": "allow",
+    "ffgrep": "allow",
+    "fff-multi-grep": "allow",
+    "bash": {
+      "*": "ask",
+      "rm -rf *": "deny",
+      "sudo *": "ask"
+    },
+    "external_directory": "ask"
+  }
+}
