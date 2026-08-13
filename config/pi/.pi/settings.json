@@ -9,7 +9,6 @@
     "/Users/lenguyen/Documents/Workspace/Github/commafiles/config/pi/pi-subagents",
     "/Users/lenguyen/Documents/Workspace/Github/commafiles/config/pi/pi-latex",
     "npm:pi-web-access",
-    "npm:@gotgenes/pi-permission-system",
     "npm:@ff-labs/pi-fff",
     "npm:pi-deepseek-search"
   ],
